@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Traversal</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+            background-color: #e2e2e2;
+            height: 100vh;
+        }
+
+        .graph-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: #fff;
+        }
+
+        .graph-draw {
+            grid-column: 2 / 4;
+        }
+
+        .graph-form input {
+            padding: 10px;
+        }
+
+        .graph-form .graph-button-container button {
+            padding: 5px 20px;
+            cursor: pointer;
+        }
+
+        .graph-form .button-container button {
+            padding: 5px 20px;
+            cursor: pointer;
+        }
+
+        .sorted-graph {
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="graph-form">
+            <input type="text" placeholder="Start Node" id="f-node">
+            <input type="text" placeholder="End Node" id="n-node">
+            <input type="number" placeholder="Cost" id="cost">
+            <div class="graph-button-container">
+                <button type="button" id="bfs-button">BFS</button>
+                <button type="button" id="dfs-button">DFS</button>
+                <button type="button" id="ucs-button">UCS</button>
+            </div>
+            <div class="button-container">
+                <button type="button" id="submit">Sumit</button>
+                <button type="button" id="resetButton">Reset</button>
+            </div>
+        </form>
+        <div class="graph-draw">
+            <canvas id="mainCanvas" width="800" height="300"></canvas>
+            <div class="sorted-graph">
+                <canvas id="sortedCanvas" width="800" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+    <center>@ Hassan Nadeem 211400036</center>
+    <script src="script.js"></script>
+</body>
+
+</html>
